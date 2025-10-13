@@ -4,7 +4,7 @@
 #include "main.hpp"
 
 // tests for exercise 1
-TEST_CASE("Test1 ", "[Find the Prime]")
+TEST_CASE("Test1 ", "[T1]")
 {
 	int n1, n2;
 	int p1, p2;
@@ -22,7 +22,7 @@ TEST_CASE("Test1 ", "[Find the Prime]")
 	REQUIRE(p1 == 211);
 	REQUIRE(p2 == 241);
 }
-TEST_CASE("Test2 ", "[Find the Prime]")
+TEST_CASE("Test2 ", "[T2]")
 {
 	int n1, n2;
 	int p1, p2;
@@ -34,4 +34,30 @@ TEST_CASE("Test2 ", "[Find the Prime]")
 
 	REQUIRE(p1 == 1361);
 	REQUIRE(p2 == 1327);
+}
+
+
+TEST_CASE("Test3 ", "[T3]")
+{
+	int n1, n2;
+	getTwoValues(n1, n2);
+	REQUIRE(n1 == 10);
+	REQUIRE(n2 == 20);
+	int p1 = getNextPrime(n1);
+	int p2 = getPrevPrime(n2);
+
+	REQUIRE(p1 == 11);
+	REQUIRE(p2 == 19);
+}
+
+TEST_CASE("Test4 ", "[T4]")
+{
+	int n1, n2;
+	n1 = 10010;
+	n2 = 10050;
+	int p1 = getNextPrime(n1);
+	int p2 = getPrevPrime(n2);
+
+	REQUIRE(p1 == 10037);
+	REQUIRE(p2 == 10039);
 }
