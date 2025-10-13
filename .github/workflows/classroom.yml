@@ -26,7 +26,7 @@ jobs:
         with:
           test-name: "Compile tests.cpp (sanity check)"
           setup-command: make clean
-          command: g++ -std=c++17 -Wall -Wextra -c main.cpp -o main && ./main < data/data1.txt 
+          command: g++ -std=c++17 -Wall -Wextra main.cpp -o main && ./main < data/data1.txt 
           timeout: 10
           max-score: 10
       # 11) Memory leak check (sanity check) 10 pts
